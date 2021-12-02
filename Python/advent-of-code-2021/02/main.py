@@ -18,8 +18,6 @@ def submarine_movement(tuples):
             y -= int(row[1])
     return x,y, (x*y)
 
-#result part 1
-
 def submarine_movement_2(tuples):
     horizontalMovement = 0
     aim = 0
