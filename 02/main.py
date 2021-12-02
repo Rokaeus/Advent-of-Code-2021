@@ -16,6 +16,7 @@ def submarine_movement(tuples):
             depth += int(row[1])
         elif row[0] == "up":
             depth -= int(row[1])
+
     return depth * horizontal_movement
 
 def submarine_movement_2(tuples):
@@ -32,7 +33,6 @@ def submarine_movement_2(tuples):
             aim -= int(x[1])
 
     return depth * horizontal_movement
-
 
 print(submarine_movement(convert_to_tuples('input.txt')))
 print(submarine_movement_2(convert_to_tuples('input.txt')))
