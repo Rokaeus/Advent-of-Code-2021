@@ -7,31 +7,31 @@ def convert_to_tuples(path):
     return results
 
 def submarine_movement(tuples):
-    x = 0
-    y = 0
+    horizontal_movement = 0
+    depth = 0
     for row in (tuples):
         if row[0] == "forward":
-            x += int(row[1])
+            horizontal_movement += int(row[1])
         elif row[0] == "down":
-            y += int(row[1])
+            depth += int(row[1])
         elif row[0] == "up":
-            y -= int(row[1])
-    return x,y, (x*y)
+            depth -= int(row[1])
+    return depth * horizontal_movement
 
 def submarine_movement_2(tuples):
-    horizontalMovement = 0
+    horizontal_movement = 0
     aim = 0
     depth = 0
     for x in (tuples):
         if x[0] == "forward":
-            horizontalMovement += int(x[1])
+            horizontal_movement += int(x[1])
             depth += int(x[1]) * aim
         elif x[0] == "down":
             aim += int(x[1])
         elif x[0] == "up":
             aim -= int(x[1])
 
-    return horizontalMovement, depth, (horizontalMovement * depth)
+    return depth * horizontal_movement
 
 
 print(submarine_movement(convert_to_tuples('input.txt')))
